@@ -1,0 +1,51 @@
+<!--
+Author: Juan Moncada
+Class: Software Engineering 
+Project: Lab 2/ RegExp tester 
+Description: Create a simple Saas application to test regular expressions. 
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"> 
+<title>RegExp</title>
+
+<form>
+    <label for="input1">Input 1:</label><br>
+    <input type="text" id="input1" name="input1"><br>
+    <label for="input2">Input 2:</label><br>
+    <input type="text" id="input2" name="input2">
+    <output name="Results" for "input1 input2"></output>
+</form> 
+
+<body onload="regex.test()">
+    <button type="button" onclick="regex.test()">Test</button><br><br>
+    
+    <script type="text/javascript" defer>
+</body>
+
+const str = 'table football';
+const regex = RegExp('foo*');
+const globalRegex = RegExp('foo*', 'g');
+
+console.log(regex.test(str));
+// expected output: true
+
+console.log(regex.test(str));
+// expected output: true
+
+console.log(globalRegex.lastIndex);
+// expected output: 0
+
+console.log(globalRegex.test(str));
+// expected output: true
+
+console.log(globalRegex.lastIndex);
+// expected output: 9
+
+console.log(globalRegex.test(str));
+// expected output: false 
+</head> 
+</html>
+</head> 
